@@ -17,7 +17,7 @@ if __name__ == '__main__':
     txt_folder = 'runs/detect/predict/labels'
     shutil.rmtree('runs') # 删除中间结果路径
     img_folder_basenames = os.listdir(img_father_folder)
-    for img_folder_basename in img_folder_basenames:
+    for img_folder_basename in tqdm(img_folder_basenames):
         img_folder = os.path.join(img_father_folder, img_folder_basename)
 
         # 把抽帧的图片都进行yolo推理；并且把json放在和图片同一个文件夹
@@ -26,7 +26,7 @@ if __name__ == '__main__':
         print(img_folder, len(jpg_files))
 
 
-        for jpg_file in tqdm(jpg_files):
+        for jpg_file in jpg_files:
             jpg_path = os.path.join(img_folder, jpg_file)
 
             res = model_detect(jpg_path, save_txt=True, imgsz=1024*3, verbose=False) # 推理结果默认存放在 'runs/detect/predict/labels'
