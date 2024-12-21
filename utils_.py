@@ -1,11 +1,12 @@
 import os
+from collections import defaultdict
 
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from moviepy.editor import VideoFileClip
-from collections import defaultdict
+
 
 def cut_video_by_frame(input_path, output_path, start_frame, end_frame):
     """
