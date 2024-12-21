@@ -9,7 +9,7 @@ from trans_tools import convert_yolo11_to_labelme
 
 
 if __name__ == '__main__':
-    model_path = 'weights/best.pt'
+    model_path = 'weights_m/best.pt'
     os.path.exists(model_path)
     model_detect = YOLO(model_path)
     img_father_folder = '/mnt/e/tmp/tmp2' # 图片文件夹在此目录下，图片文件夹下是图片
