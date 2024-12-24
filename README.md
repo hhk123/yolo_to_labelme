@@ -11,4 +11,5 @@ img_father_folder:
         -- img2.jpg
 ## 运行yolo_infer_and_trans.py
 
+注意：别把东西放runs文件夹，会被代码删除
 
